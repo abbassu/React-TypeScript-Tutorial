@@ -1,24 +1,44 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Greet from './component/Greet/Greet';
+import Person from './component/person/person';
+import PersonList from './component/personList/PersonList';
+import Status from './component/status/Status';
+import Header from './component/header/header';
+import Oscer from './component/oscer/oscer';
 function App() {
+
+  const personName={
+    firstName:"abbas",
+    lastName: "Surakji"
+  }
+  const listname=[
+    {
+      first:"ahmas",
+      last:"sulaiman"
+    },
+    {
+      first:"ahmas11",
+      last:"sulaiman"
+    },
+    {
+      first:"ahmas222",
+      last:"sulaiman"
+    }
+  ]
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name="abbas" message={12} isLoggedIn={false}/>
+      <Person name={personName}/>
+      <PersonList name={listname}/>
+      <Status status="loading"/>
+      <Header> Abbas King</Header>
+      <Oscer>
+        <Header> Abbas King</Header>
+      </Oscer>
     </div>
   );
 }
