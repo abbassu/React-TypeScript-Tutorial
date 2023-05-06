@@ -1,10 +1,7 @@
 import React from 'react'
-
+import { Name } from '../person/typee'
 type InPersonList={
-    name:{
-        first:string
-        last:string
-    }[]
+    name:Name[]
 }
 
 function PersonList(props:InPersonList) {
